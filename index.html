@@ -3,47 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Card Game</title>
+  <title>Outta Pocket - A Party Card Game</title>
   <style>
     body {
-      font-family: sans-serif;
-      max-width: 600px;
+      font-family: Arial, sans-serif;
       margin: 40px auto;
       padding: 20px;
-      text-align: center;
+      max-width: 1000px;
     }
-    img {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+    .product-image {
+      flex: 1;
+      min-width: 300px;
+    }
+    .product-image img {
       max-width: 100%;
       border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    button {
-      padding: 12px 24px;
+    .product-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .subtitle {
       font-size: 16px;
-      background: black;
+      letter-spacing: 3px;
+      color: gray;
+      margin-bottom: 10px;
+    }
+    .stars {
+      color: #FFA500;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .buy-btn {
+      background-color: black;
       color: white;
+      padding: 14px 28px;
       border: none;
       border-radius: 6px;
+      font-size: 16px;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 15px;
+    }
+    .buy-btn:hover {
+      background-color: #333;
     }
   </style>
 </head>
 <body>
 
-  <h1>Outta Pocket</h1>
-  <img src="360_F_1235256011_a9B9QKSOCxqUOJiSiK6hBaaSbPYjZhCp.jpg" alt="Card Game" />
-  <p>A fun party card game for family and friends. 250 Questions. Ages 16+.</p>
-  <h2>$24.99</h2>
+  <div class="container">
+    <div class="product-image">
+      <img src="outta-pocket-box.png" alt="Outta Pocket Card Game" />
+    </div>
+    <div class="product-info">
+      <div class="title">Outta Pocket</div>
+      <div class="subtitle">A PARTY GAME</div>
+      <div class="stars">★ ★ ★ ★ ☆ &nbsp; 1,134 reviews</div>
+      <ul>
+        <li>250 bold and hilarious prompt cards</li>
+        <li>Designed for chaotic friend groups and game nights</li>
+        <li>Unfiltered, laugh-out-loud moments guaranteed</li>
+        <li>For 3+ players, ages 16 and up</li>
+      </ul>
+      <div class="price">$24.99</div>
 
-  <!-- PayPal Button -->
-  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com">
-    <input type="hidden" name="item_name" value="Who's Most Likely To - Clean Edition">
-    <input type="hidden" name="amount" value="19.99">
-    <input type="hidden" name="currency_code" value="USD">
-    <button type="submit">Buy Now</button>
-  </form>
+      <!-- PayPal Buy Now button -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com">
+        <input type="hidden" name="item_name" value="Outta Pocket Card Game">
+        <input type="hidden" name="amount" value="24.99">
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit" class="buy-btn">Buy Now</button>
+      </form>
+    </div>
+  </div>
 
 </body>
 </html>
